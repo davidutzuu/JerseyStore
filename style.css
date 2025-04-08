@@ -296,45 +296,49 @@
     8. Link “Înapoi sus” fix, colțul din dreapta-jos
     ============================
   */
-  a[href="#"] {
+ /* Butonul fix din dreapta-jos */
+ /* Butonul fix din dreapta-jos */
+/* Ascundem la scroll mic, afișăm la scroll mare (opțional, vechiul script poate rămâne) */
+.btn-up {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--culoare-secundara);
-    border: 2px solid var(--culoare-accent);
-    padding: 10px;
-    border-radius: 50% 50% 0 0;
-    text-align: center;
-    font-size: 1.5rem;
-    opacity: 0.5;
-    transition: all 0.4s ease-in-out;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
-    color: white;
+  
+    /* Dimensiuni mai mici */
+    width: 35px;
+    height: 35px;
+  
+    /* Culoare de fundal gri și săgeată neagră */
+    background-color: #ccc;
+    color: #000;
+  
+    /* Centrare verticală și orizontală a săgeții */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Formă rotundă */
+    border-radius: 50%;
     text-decoration: none;
+    font-size: 1.2rem;    /* mărimea săgeții */
+    font-weight: bold;    /* săgeata puțin mai grosă */
+  
+    /* Mică umbră */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  
+    /* Tranziții la hover */
+    transition: background-color 0.3s, transform 0.3s;
+    
+    /* (Opțional) La început o ascundem dacă doriți s-o afișați numai după scroll */
+    /* display: none; */
   }
-  a[href="#"]:hover {
-    opacity: 1;
+  
+  /* Efect la hover (întunecăm puțin) */
+  .btn-up:hover {
+    background-color: #aaa;
     transform: scale(1.1);
-    background-color: var(--culoare-accent);
   }
-  a[href="#"]::after {
-    content: "↑";
-    display: block;
-    font-size: 1.8rem;
-  }
-  a[href="#"]:hover::before {
-    content: "Înapoi sus";
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--culoare-primara);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    white-space: nowrap;
-  }
+  
   
   /*
     ============================
@@ -372,4 +376,3 @@
       min-width: auto;
     }
   }
-  
