@@ -1,83 +1,194 @@
 <!DOCTYPE html>
 <html lang="ro">
-    <head>
-        <title>Jerseys Store</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="NBA, jersey-uri, echipe, jucători, reduceri">
-        <meta name="description" content="Cea mai mare selecție de jersey-uri NBA originale.">
-        <meta name="author" content="Irina Ciocan">
-        <link rel="icon" type="image/png" href="./resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="Jerseys Store" />
-        <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest" />
-    </head>
-    <body>
-        <header>
-            <h1>NBA Jerseys Store</h1>
-            <p>Bine ai venit la NBA Jerseys Store! Descoperă selecția noastră de jersey-uri originale și poartă cu mândrie culorile echipei tale favorite!</p>
-            <nav>
-                <ul>
-                    <li><a href="#sectiune1">Produse</a>
-                        <ul>
-                            <li><a href="#subsectiune1">Jersey-uri Populare</a></li>
-                            <li><a href="#subsectiune2">Oferte Speciale</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#sectiune2">Despre Noi</a></li>
-                    <li><a href="https://www.nba.com/" target="_blank">Site Extern</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="sectiune1">
-                <h2>Produse</h2>
-                <p>Alege din sute de modele autentice. Folosește filtrele pentru a găsi rapid produsul dorit.</p>
-                <section id="subsectiune1">
-                    <h3>Jersey-uri Populare</h3>
-                    <p><strong>Top vânzări</strong>: Descoperă cele mai populare jersey-uri din magazin. Modele inspirate de cei mai îndrăgiți jucători și echipe.</p>
-                    <figure>
-                        <img src="./resurse/imagini/poze/jersey.webp" alt="Jersey popular" width="300" />
-                        <figcaption>Jersey-ul săptămânii: Confort și stil autentic!</figcaption>
-                    </figure>
-                    <section>
-                        <h2>The Top 10 BEST NBA City Jerseys 2024/2025</h2>
-                        <iframe 
-                            name="videoFrame" 
-                            width="560" 
-                            height="315"
-                            src="https://www.youtube.com/embed/HFlwp8UCEE8"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </section>
-                    <p>Profită de <mark>reducerile exclusive</mark> și rămâi la curent cu noile lansări. Achiziționează jersey-ul tău preferat înainte să se epuizeze stocul!</p>
-                </section>
-                <section id="subsectiune2">
-                    <h4>Oferte Speciale</h4>
-                    <p><abbr title="Reduceri Mari">RM</abbr>: Promoții de sezon și oferte limitate. Fii pe fază pentru prețuri de nerefuzat!</p>
-                    <p><em>Atenție!</em> Stocurile sunt limitate. Nu rata șansa de a cumpăra la preț redus!</p>
-                    <a href="document.pdf" download>Descarcă Catalogul</a>
-                </section>
-            </section>
-            <section id="sectiune2">
-                <h2>Despre Noi</h2>
-                <p>Magazinul NBA Jerseys Store oferă produse originale și suport dedicat clienților. Misiunea noastră este să aducem fanii mai aproape de jocul pe care îl iubesc.</p>
-                <address>
-                    <p>Email: <a href="mailto:support@jerseysstore.com">support@jerseysstore.com</a></p>
-                    <p>Telefon: <a href="tel:+40712345678">+40 712 345 678</a></p>
-                    <p>Adresa: <a href="https://goo.gl/maps/example" target="_blank">Craiova, Str. Exemplelor, Nr. 10</a></p>
-                    <p>Skype: <a href="skype:live:support_jerseys">Contactează-ne pe Skype</a></p>
-                </address>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 NBA Jerseys Store. Toate drepturile rezervate.</p>
-            <p>Ultima actualizare: <time datetime="2025-03-10">10 Martie 2025</time></p>
-            <a href="#">Înapoi sus</a>
-        </footer>
-    </body>
+<head>
+  <title>Jerseys Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="NBA, jersey-uri, echipe, jucători, reduceri">
+  <meta name="description" content="Cea mai mare selecție de jersey-uri NBA originale.">
+  <meta name="author" content="Irina Ciocan">
+
+  <!-- Font extern de la Google Fonts (Open Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+  
+  <!-- FontAwesome pentru iconuri -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Favicon-uri (opțional) -->
+  <link rel="icon" type="image/png" href="./resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Jerseys Store" />
+  <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest" />
+
+  <!-- Fișierul CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <!-- Icon static FontAwesome (minge de baschet) + titlu -->
+    <h1><i class="fas fa-basketball-ball"></i> NBA Jerseys Store</h1>
+    <p>Bine ai venit la NBA Jerseys Store! Descoperă selecția noastră de jersey-uri originale și poartă cu mândrie culorile echipei tale favorite!</p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#sectiune1">Produse</a>
+          <ul>
+            <li><a href="#subsectiune1">Jersey-uri Populare</a></li>
+            <li><a href="#subsectiune2">Oferte Speciale</a></li>
+          </ul>
+        </li>
+        <li><a href="#sectiune2">Despre Noi</a></li>
+        <li><a href="https://www.nba.com/" target="_blank">Site Extern</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conținutul principal este organizat în grid cu zonele din cerință -->
+  <main>
+    <!-- ZONA2 (placeholder scurt) -->
+    <section id="zona2">
+      <h2>Anunț scurt 
+        <!-- Icon animat (ex. fa-spin sau fa-pulse) -->
+        <i class="fas fa-circle-notch fa-spin" style="color: var(--culoare-accent);"></i>
+      </h2>
+      <p>
+        <strong>Noutate:</strong> Sezonul NBA 2025/2026 este pe cale să înceapă, iar noi am actualizat deja stocul de jersey-uri pentru cele mai îndrăgite echipe!  
+        Cumpără acum și beneficiezi de oferte timpurii și livrare gratuită la comenzi peste 300 RON.
+      </p>
+    </section>
+
+    <!-- ZONA3 (sectiune1) -->
+    <section id="sectiune1">
+      <h2>Produse</h2>
+      <p>Alege din sute de modele autentice. Folosește filtrele pentru a găsi rapid produsul dorit. Începând de la cele mai noi jersey-uri City Edition până la clasicele ediții retro, te așteaptă o gamă variată și actualizată.</p>
+      <p>Fiecare produs este verificat pentru calitate și vine cu garanție de originalitate. Dacă dorești să îți personalizezi tricoul cu numele tău, oferim și servicii de customizare pe loc!</p>
+    </section>
+
+    <!-- ZONA8 (sectiune2) -->
+    <section id="sectiune2">
+      <h2>Despre Noi</h2>
+      <p>Magazinul NBA Jerseys Store oferă produse originale și suport dedicat clienților. Misiunea noastră este să aducem fanii mai aproape de jocul pe care îl iubesc.</p>
+      <p>Cu peste 10 ani de experiență, suntem principalul distribuitor local de produse NBA licențiate. Colaborăm direct cu brandurile oficiale ale ligii și garantăm 100% autenticitate.</p>
+      <address>
+        <p>Email: <a href="mailto:support@jerseysstore.com">support@jerseysstore.com</a></p>
+        <p>Telefon: <a href="tel:+40712345678">+40 712 345 678</a></p>
+        <p>Adresa: <a href="https://goo.gl/maps/example" target="_blank">Craiova, Str. Exemplelor, Nr. 10</a></p>
+        <p>Skype: <a href="skype:live:support_jerseys">Contactează-ne pe Skype</a></p>
+      </address>
+    </section>
+
+    <!-- ZONA5 -->
+    <section id="zona5">
+      <h2>Date utilizator / Info cont</h2>
+      <p>Crearea unui cont de utilizator îți permite:</p>
+      <ul>
+        <li>Acces la istoricul comenzilor</li>
+        <li>Salvarea preferințelor (mărimi, echipe favorite)</li>
+        <li>Notificări despre noile lansări și reduceri personalizate</li>
+      </ul>
+      <p>Verifică setările de confidențialitate și protecția datelor pentru a te asigura că ești mereu informat și în siguranță.</p>
+    </section>
+
+    <!-- ZONA6 (subsectiune1) -->
+    <section id="subsectiune1">
+      <h3>Jersey-uri Populare</h3>
+      <p><strong>Top vânzări</strong>: Descoperă cele mai populare jersey-uri din magazin. Modele inspirate de cei mai îndrăgiți jucători și echipe. Atenție la stocurile limitate pentru edițiile speciale!</p>
+      <figure>
+        <!-- Imagina cu jersey (dimensiune flexibilă) -->
+        <img src="./resurse/imagini/poze/jersey.webp" alt="Jersey popular" />
+        <figcaption>Jersey-ul săptămânii: Confort și stil autentic!</figcaption>
+      </figure>
+      <!-- Taburi video -->
+      <section class="taburi-video">
+        <input type="radio" name="taburi" id="tab1" checked>
+        <input type="radio" name="taburi" id="tab2">
+        <input type="radio" name="taburi" id="tab3">
+    
+        <div class="taburi">
+          <label for="tab1">video1</label>
+          <label for="tab2">video2</label>
+          <label for="tab3">video3</label>
+        </div>
+    
+        <div class="video">
+          <div class="video-content" id="video1">
+            <iframe src="https://www.youtube.com/embed/HFlwp8UCEE8" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-content" id="video2">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-content" id="video3">
+            <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ZONA4 (subsectiune2) -->
+    <section id="subsectiune2">
+      <h4>Oferte Speciale</h4>
+      <p><abbr title="Reduceri Mari">RM</abbr>: Promoții de sezon și oferte limitate. Fii pe fază pentru prețuri de nerefuzat! Uneori oferim pachete <em>bundle</em> (tricouri + șosete oficiale) la prețuri foarte avantajoase.</p>
+      <p><em>Atenție!</em> Stocurile sunt limitate. Nu rata șansa de a cumpăra la preț redus!</p>
+      <a href="document.pdf" download>Descarcă Catalogul</a>
+      <!-- Tabel de exemplu -->
+      <div class="table-container">
+        <table>
+          <caption>Produse și date</caption>
+          <thead>
+            <tr>
+              <th>Produs</th>
+              <th>Data lansării</th>
+              <th>Preț</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lakers Jersey</td>
+              <td>2025-03-10</td>
+              <td>299 RON</td>
+            </tr>
+            <tr>
+              <td>Heat Jersey</td>
+              <td>2025-04-01</td>
+              <td>349 RON</td>
+            </tr>
+            <tr>
+              <td>Bulls Jersey</td>
+              <td>2025-05-05</td>
+              <td>259 RON</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ZONA7 -->
+    <section id="zona7">
+      <h2>Alte informații / Evenimente</h2>
+      <p><strong>Eveniment Special:</strong> Lansarea noilor jersey-uri City Edition, pe 15 mai! Vor fi disponibile în cantități limitate și cu detalii unice pentru fiecare oraș.</p>
+      <p>Urmărește-ne pe rețelele sociale pentru concursurile săptămânale și evenimentele pop-up store din diferite orașe.</p>
+      <p>Te așteptăm și la târgurile de echipamente sportive, unde organizăm tombole și prezentări în avanpremieră.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NBA Jerseys Store. Toate drepturile rezervate.</p>
+    <p>Ultima actualizare: <time datetime="2025-03-10">10 Martie 2025</time></p>
+    <a href="#">Înapoi sus</a>
+  </footer>
+</body>
 </html>

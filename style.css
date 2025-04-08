@@ -1,0 +1,375 @@
+/* 
+  ============================
+  1. Variabile CSS (inclusiv spațiere laterală & padding zone)
+  ============================
+*/
+:root {
+    /* Schema cromatică (minim 5 culori) */
+    --culoare-primara:   #1d3557;  /* albastru închis */
+    --culoare-secundara: #457b9d;  /* albastru deschis */
+    --culoare-accent:    #e63946;  /* roșu intens */
+    --culoare-fundal:    #f1faee;  /* fundal foarte deschis */
+    --culoare-text:      #000000;  /* text negru */
+    --culoare-contur:    #264653;  /* contur închis */
+  
+    /* Spațieri folosite pentru design responsiv */
+    --spatiere-laterala: 2rem;  /* pe desktop (implicit) */
+    --zona-padding:      1.5rem;
+    --grid-gap:          10px;  /* spațiere între celulele gridului */
+  }
+  
+  /* 
+    Micșorăm spațierea la ecran mediu, apoi și mai mică la ecran mic 
+    (se poate ajusta cum dorești).
+  */
+  @media screen and (max-width: 992px) {
+    :root {
+      --spatiere-laterala: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    :root {
+      --spatiere-laterala: 1rem;
+      --zona-padding: 1rem;
+    }
+  }
+  
+  /*
+    ============================
+    2. Reset + Body (font, margin lateral, culori)
+    ============================
+  */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--culoare-fundal);
+    color: var(--culoare-text);
+    margin-left: var(--spatiere-laterala);
+    margin-right: var(--spatiere-laterala);
+  }
+  
+  /*
+    ============================
+    3. Header + Footer
+    ============================
+  */
+  header {
+    grid-area: zona1;
+    background: var(--culoare-secundara);
+    color: white;
+    padding: var(--zona-padding);
+    border-radius: 5px;
+    border: 1px solid var(--culoare-contur);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  footer {
+    grid-area: footer;
+    background: var(--culoare-primara);
+    color: white;
+    text-align: center;
+    padding: var(--zona-padding);
+    border-radius: 5px;
+    border: 1px solid var(--culoare-contur);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
+  /*
+    ============================
+    4. Container principal (Grid)
+    ============================
+  */
+  main {
+    display: grid;
+    grid-template-areas:
+      "zona1 zona1 zona1"
+      "zona2 zona3 zona8"
+      "zona5 zona6 zona8"
+      "zona5 zona4 zona7"
+      "footer footer footer";
+    gap: var(--grid-gap);
+    padding-bottom: 3rem; /* un mic spațiu la final, opțional */
+  }
+  
+  /* 
+    Fiecare zonă: background, border, colțuri rotunjite, box-shadow 
+  */
+  #zona2,
+  #sectiune1,
+  #sectiune2,
+  #zona5,
+  #subsectiune1,
+  #subsectiune2,
+  #zona7 {
+    padding: var(--zona-padding);
+    border: 1px solid var(--culoare-contur);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Atribuim secțiunilor zonele din grid și culori de fundal */
+  #zona2       { grid-area: zona2; background: #fff8ec; }
+  #sectiune1   { grid-area: zona3; background: #fefefe; }
+  #sectiune2   { grid-area: zona8; background: #fefefe; }
+  #zona5       { grid-area: zona5; background: #fff8ec; }
+  #subsectiune1{ grid-area: zona6; background: #fefefe; }
+  #subsectiune2{ grid-area: zona4; background: #fefefe; }
+  #zona7       { grid-area: zona7; background: #fff8ec; }
+  
+  /*
+    ============================
+    5. Meniu (Flexbox + submeniu)
+    ============================
+  */
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: var(--culoare-primara);
+    margin: 0; /* deja avem padding in header, se pot ajusta */
+    padding: 0;
+  }
+  nav ul > li {
+    position: relative;
+    padding: 10px 20px;
+  }
+  nav ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--culoare-secundara);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul > li:hover > ul {
+    display: block;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /*
+    ============================
+    6. Stilizare TABURI VIDEO 
+    (folosește flexbox, border, etc.)
+    ============================
+  */
+  .taburi-video {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+  
+  /* Ascundem inputurile radio (tab1, tab2, tab3) */
+  .taburi-video input[type="radio"] {
+    display: none;
+  }
+  
+  /* Containerul etichetelor (tab-urile) */
+  .taburi {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    order: 2;
+  }
+  
+  /* Containerul video */
+  .video {
+    order: 1;
+    flex-grow: 1;
+    border: 6px solid var(--culoare-contur);
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  /* iframe-ul video + imagini => dimensionare flexibilă */
+  img {
+    width: 100%;
+    max-width: 300px; /* mai mică decât înainte */
+    height: auto;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  iframe {
+    width: 100%;
+    max-width: 800px; /* puțin mai mare decât înainte */
+    height: 300px;     /* sau: height: auto; pentru proporțional */
+    border-radius: 10px;
+    border: none;
+  }
+  
+  /* Stil taburi (label) */
+  .taburi label {
+    background-color: var(--culoare-secundara);
+    border: 3px double var(--culoare-primara);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    min-width: 150px;
+    box-shadow: inset 0 0 0 1px var(--culoare-primara);
+  }
+  
+  /* Hover pe tab */
+  .taburi label:hover {
+    background-color: var(--culoare-accent);
+    color: #fff;
+    transform: scale(1.02);
+  }
+  
+  /* Tab activ (radio checked) */
+  #tab1:checked ~ .taburi label[for="tab1"],
+  #tab2:checked ~ .taburi label[for="tab2"],
+  #tab3:checked ~ .taburi label[for="tab3"] {
+    background-color: var(--culoare-primara);
+    color: white;
+    border-color: var(--culoare-contur);
+    box-shadow: inset 0 0 0 2px var(--culoare-contur);
+  }
+  
+  /* Doar video-ul activ vizibil */
+  .video-content {
+    display: none;
+  }
+  #tab1:checked ~ .video #video1,
+  #tab2:checked ~ .video #video2,
+  #tab3:checked ~ .video #video3 {
+    display: block;
+  }
+  
+  /*
+    ============================
+    7. Stil Tabel
+    ============================
+  */
+  .table-container {
+    overflow-x: auto; /* pentru scroll orizontal dacă e prea lat */
+    margin-top: 1em;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid var(--culoare-primara);
+    font-size: 0.9rem;
+  }
+  caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  thead {
+    background-color: var(--culoare-secundara);
+    color: white;
+  }
+  tbody tr:nth-child(even) {
+    background-color: #e0e0e0;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  tbody tr:hover {
+    background-color: var(--culoare-accent);
+    color: white;
+    transition: background-color 0.5s;
+  }
+  
+  /*
+    ============================
+    8. Link “Înapoi sus” fix, colțul din dreapta-jos
+    ============================
+  */
+  a[href="#"] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--culoare-secundara);
+    border: 2px solid var(--culoare-accent);
+    padding: 10px;
+    border-radius: 50% 50% 0 0;
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    transition: all 0.4s ease-in-out;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-decoration: none;
+  }
+  a[href="#"]:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    background-color: var(--culoare-accent);
+  }
+  a[href="#"]::after {
+    content: "↑";
+    display: block;
+    font-size: 1.8rem;
+  }
+  a[href="#"]:hover::before {
+    content: "Înapoi sus";
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--culoare-primara);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  
+  /*
+    ============================
+    9. Layout Responsiv 
+    (Grid pe 1 coloană la ecrane mici)
+    ============================
+  */
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 14px; /* micșorăm fontul global */
+    }
+  
+    main {
+      display: grid;
+      grid-template-areas:
+        "zona1"
+        "zona2"
+        "zona3"
+        "zona8"
+        "zona5"
+        "zona6"
+        "zona4"
+        "zona7"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  
+    table {
+      font-size: 0.85rem;
+    }
+  
+    .taburi label {
+      font-size: 0.85rem;
+      padding: 0.5rem;
+      min-width: auto;
+    }
+  }
+  
