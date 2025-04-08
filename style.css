@@ -4,7 +4,6 @@
   ============================
 */
 :root {
-    /* Schema cromatică (minim 5 culori) */
     --culoare-primara:   #1d3557;  /* albastru închis */
     --culoare-secundara: #457b9d;  /* albastru deschis */
     --culoare-accent:    #e63946;  /* roșu intens */
@@ -13,15 +12,10 @@
     --culoare-contur:    #264653;  /* contur închis */
   
     /* Spațieri folosite pentru design responsiv */
-    --spatiere-laterala: 2rem;  /* pe desktop (implicit) */
+    --spatiere-laterala: 2rem;  
     --zona-padding:      1.5rem;
-    --grid-gap:          10px;  /* spațiere între celulele gridului */
+    --grid-gap:          10px;
   }
-  
-  /* 
-    Micșorăm spațierea la ecran mediu, apoi și mai mică la ecran mic 
-    (se poate ajusta cum dorești).
-  */
   @media screen and (max-width: 992px) {
     :root {
       --spatiere-laterala: 1.5rem;
@@ -92,7 +86,7 @@
       "zona5 zona4 zona7"
       "footer footer footer";
     gap: var(--grid-gap);
-    padding-bottom: 3rem; /* un mic spațiu la final, opțional */
+    padding-bottom: 3rem; 
   }
   
   /* 
@@ -196,7 +190,7 @@
     border-radius: 8px;
   }
   
-  /* iframe-ul video + imagini => dimensionare flexibilă */
+  /* iframe-ul video + imagini */
   img {
     width: 100%;
     max-width: 300px; /* mai mică decât înainte */
@@ -295,10 +289,7 @@
     ============================
     8. Link “Înapoi sus” fix, colțul din dreapta-jos
     ============================
-  */
  /* Butonul fix din dreapta-jos */
- /* Butonul fix din dreapta-jos */
-/* Ascundem la scroll mic, afișăm la scroll mare (opțional, vechiul script poate rămâne) */
 .btn-up {
     position: fixed;
     bottom: 20px;
@@ -328,8 +319,6 @@
   
     /* Tranziții la hover */
     transition: background-color 0.3s, transform 0.3s;
-    
-    /* (Opțional) La început o ascundem dacă doriți s-o afișați numai după scroll */
     /* display: none; */
   }
   
